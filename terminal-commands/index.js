@@ -1,3 +1,4 @@
 const terminalCommands = require('./terminal-commands.js');
 
-terminalCommands.ls();
+
+terminalCommands.mkdir('test');

@@ -8,4 +8,19 @@ module.exports.ls = () => {
 
    console.log(filesToString);
   });
+
+};
+
+module.exports.touch = (file) => {
+    fs.writeFile(file,'', function(err){
+        if(err) throw err;
+        console.log('File created successfully ' + file) ;
+    });
+};
+  
+  module.exports.mkdir = (dir) => {
+    fs.mkdir(dir,{recursive: true}, (err) =>{
+        if(err) throw err;
+        console.log('Created New Directory ' + dir);
+    })
 };
